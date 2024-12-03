@@ -6,18 +6,16 @@
 /*   By: hcarrasq <hcarrasq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:56:08 by hcarrasq          #+#    #+#             */
-/*   Updated: 2024/12/02 15:32:40 by hcarrasq         ###   ########.fr       */
+/*   Updated: 2024/12/03 14:08:16 by hcarrasq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
-#include <stdio.h>
-#include <unistd.h>
-	
-int ft_prtptr(unsigned long int n, char *base, int flag)
+int	ft_prtptr(unsigned long long int n, char *base, int flag)
 {
 	int	count;
-	int rmd;
+	int	rmd;
 
 	count = 0;
 	if (n == 0)
@@ -26,6 +24,7 @@ int ft_prtptr(unsigned long int n, char *base, int flag)
 	{
 		write (1, "0x", 2);
 		count = 2;
+		flag = 1;
 	}
 	if (n >= 16)
 		count += ft_prtptr(n / 16, base, 1);

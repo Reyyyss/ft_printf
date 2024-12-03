@@ -6,17 +6,17 @@
 /*   By: hcarrasq <hcarrasq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:24:20 by hcarrasq          #+#    #+#             */
-/*   Updated: 2024/12/02 16:11:09 by hcarrasq         ###   ########.fr       */
+/*   Updated: 2024/12/03 14:09:07 by hcarrasq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(long nbr, int lbase,char *base)
+int	ft_putnbr_base(long nbr, int lbase, char *base)
 {
 	int	count;
-	int rmd;
-	
+	int	rmd;
+
 	count = 0;
 	if (nbr < 0)
 	{
